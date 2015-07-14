@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="base.css" />
+    <script preload src="script/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script preload src="script/jquery.color-2.1.2.min.js" type="text/javascript"></script>
+    <script preload src="script/jquery.powertimer.js" type="text/javascript"></script>
+	
+	<script type="text/javascript" src="rsa/pidcrypt.js"></script>  
+	<script type="text/javascript" src="rsa/pidcrypt_util.js"></script>  
+	
+    <script preload src="script/application.js" type="text/javascript"></script>
+    <title>Secure Communicator</title>
+  </head>
+  <body>	
+
+
+  
+	<!--Отделните части на приложението, чрез jQuery и JavaScript ще управляваме съдържанието им-->
+	<div id="mainContent">
+	
+		
+		<!--Контейнер за свързване към услугата, получава списък от хранилища -->
+		<div id="connectScreen" class="content">
+			<div class="infoText"> Екран служещ за връзка към сървъра за поискване на набор от хранилища, регистрация на текущия клиент в избрани от него хранилища! </div>		
+			<div class="infoText"> <div class="button" id="connect">Свържи</div> </div>
+			<div id="response"></div>
+		</div>
+		
+		<!--Контейнер за свързване към услугата, получава списък от хранилища -->
+		<div id="manageScreen" class="hidden content">
+			<div> Управлявай хранилища </div>
+			<div id='storageTable'></div>
+		</div>
+		
+		
+		<!--Контейнер за свързване към услугата, получава списък от хранилища -->
+		<div id="testScreen" class="hidden content">
+			<div> Тествай услугата </div>
+			<div id="notConnectedTest"> Съжалявам но не сте се свързали към услугата все още </div>
+			<div id="connectedTest" class="hidden">
+				Съобщениe:<br><input id="message" type="text" required="true"><br><br>
+				IP Adress:<br><input id="iptest" type="text" required="true"><br><br>
+				<div id="storagesHelper"><div id="selectionStorages">Хранлища:</div></div>
+				<div id="submit" class="button">Тествай</div>
+				<table id="testInfo" class="connect-storage-row">
+					<tr><td class='tdInfo highlighted connect-storage-fields'>Етап</td><td class='tdInfo highlighted connect-storage-fields'>Съобщение</td></tr>
+					<tr><td class='tdInfo connect-storage-fields'>Оригинал</td><td id="messageOriginal" class='tdInfo connect-storage-fields'>Съобщение</td></tr>
+					<tr><td class='tdInfo connect-storage-fields'>Криптирано с публичен ключ на сървъра:</td><td id="serverPublicEncrypted" class='tdInfo connect-storage-fields'>Съобщение</td></tr>
+					<tr><td class='tdInfo connect-storage-fields'>Получено криптирано от сървъра:</td><td id="encrypted" class='tdInfo connect-storage-fields'>Съобщение</td></tr>
+					<tr><td class='tdInfo connect-storage-fields'>Разкриптирано с частен ключ на клиента:</td><td  id="clientPrivateDecrypted" class='tdInfo connect-storage-fields'>Съобщение</td></tr>
+				</table>
+				
+			</div>
+		</div>		
+		
+	</div>
+	
+    <header id="header" class="mainHeaderBack">
+      <div class="navigation-items selected-item" id="connectScreen">Свържи се</div>
+      <div class="navigation-items" id="manage-storages">Управлявай</div>
+      <div class="navigation-items" id="test-service">Изпрати съобщение</div>
+    </header>
+	
+  </body>
+</html>

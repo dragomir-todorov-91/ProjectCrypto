@@ -1,0 +1,218 @@
+html,body
+{
+    margin:0; 
+    background-color: #eee;
+}
+
+div.navigation-items
+{
+	font-family: 'Roboto-Medium';
+	font-size: 20px;
+	color: white;
+	
+    position: relative;
+    margin:15px auto 0;
+    left:16px;
+	display:inline-block;
+    cursor: pointer;
+}
+
+div.selected-item
+{
+	color:black;
+	margin-left: 50px;
+	margin-right: 50px;
+	border: 1px solid;
+	border-color: white;
+	border-radius: 5px;
+	padding: 5px;
+	background-color:white;
+}
+
+header
+{
+	
+    background-color: white;
+    margin: 0 auto;
+    z-index:100;
+    text-align: center;
+
+
+    position: fixed;
+	box-shadow: 0px 5px 3px #888;
+    height:64px;
+	
+    margin-left: auto;
+    margin-right: auto;
+	
+    width:100%;
+    top: 0px;
+    left:0px;
+    transition: height 0.5s; /* transition - по-гладко появяване на менюто - анимация съответстваща на дизайна */
+}
+
+
+/*За отделните страници и главното съдържание*/
+.hidden
+{
+	display:none;
+}
+
+/* Следните стилове управляват главното съдържание и всички прилежащи на него елементи*/
+.content
+{
+	font-family: 'Roboto-Medium';
+	font-size: 16px;
+	color: #333;
+	
+	word-wrap: break-word; /* Ако някое съдържание стане твърде голямо, да се покаже на няколко реда, макар и да развали layout-а! Екстремен случай*/
+	
+    position: absolute;
+	text-align:center;
+	margin-top: 20px;
+	width: 100%;
+	
+    top: 66px;
+    background-color: #eee;
+    opacity: 1;
+	
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+
+.button
+{
+	margin: 35px;
+	text-align: center;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #005500;
+	line-height: 4;
+	border-radius: 50px;
+	color: #fff;
+	width: 200px;
+	height: 64px;
+	cursor: pointer;
+}
+
+.button:active
+{
+	background-color:#667278;
+}
+
+
+
+.mainHeaderBack
+{ 
+    transition: all 0.4s ease;
+	background-color:#b0bec5;
+}
+
+.secondaryHeaderBack
+{
+	background-color: #005500;
+}
+
+table.connect-storage-row
+{
+	text-align: left;
+	margin: 0 auto;
+	margin-top: 50px;	
+	border: 3px solid;
+}
+
+.connect-storage-fields
+{
+	border: 1px solid;
+	padding: 15px;
+}
+
+.storage-button
+{	
+	background-color: #8894A0;
+	cursor: pointer;
+}
+
+.storage-button:hover
+{
+	background-color:#667278;
+}
+
+.storage-button:active
+{
+	background-color:#a3d461;
+}
+
+.storageName
+{
+	margin-top:25px;
+}
+
+.update-manage-storage, .delete-manage-storage
+{
+	background-color: #8894A0;
+	cursor: pointer;
+}
+
+.update-manage-storage:hover, .delete-manage-storage:hover
+{
+	background-color: #667278;
+	cursor: pointer;
+}
+
+
+.delete-manage-storage:active, .storage-deletion:active
+{
+	background-color:#ff0401;
+}
+
+.update-manage-storage:active, .storage-connection:active
+{
+	background-color:#a3d461;
+}
+
+input[type="textarea"] 
+{
+	 width: 100%;
+	 resize: true;	
+	 height: auto; 
+}
+
+.textareaholder
+{
+	width: 100%; 
+}
+
+.edited
+{
+	background-color: #a3d461;
+}
+
+#connectedTest
+{
+	width: 80%;
+	margin: 0 auto;  margin-top: 50px;
+}
+
+#message, #iptest
+{
+	margin: 10px;
+	width: 80%;
+}
+
+#testInfo
+{
+  width: 100%;
+}
+
+.highlighted
+{
+	background-color: #8894A0;
+}
+
+.tdInfo
+{
+  overflow-wrap: break-word;
+  max-width: 500px;
+}
